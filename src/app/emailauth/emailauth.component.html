@@ -1,0 +1,17 @@
+<!-- Register Page-->
+<div class="register-photo">
+  <div class="form-container">
+      <div class="image-holder"></div>
+      <form  (ngSubmit)="login(loginForm.value)" [formGroup]="loginForm"> 
+          <h2 class="text-center">Create an account.</h2>
+          <div class="form-group"><input class="form-control" type="email" name="email"  formControlName="email" placeholder="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'"></div>
+          <div class="form-group"><input class="form-control" type="password" name="password" formControlName="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'"></div>
+          <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Sign Up</button></div><a class="already" href="/signin">You already have an account? <Strong>Log In </Strong></a></form>
+        
+</div>
+
+
+<div *ngIf="authService.error != ''">
+  <p>{{authService.error}}</p>
+</div>
+

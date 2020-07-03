@@ -1,0 +1,26 @@
+<!-- Admin login page-->
+<head>
+  <link rel="stylesheet" href="C:\Users\Harish\Desktop\BEproject\src\app\signin\signin.component.scss">
+  
+</head>
+<div class="login-dark">
+  <h2>AdminSignIn </h2>
+  <form (ngSubmit)="signin(signinForm.value)" [formGroup]="signinForm">
+      <img src="../../assets/fire.svg" />
+    <label for="email">Emailid:</label>
+    <input type="email" name="email" formControlName="email" placeholder="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'">
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" formControlName="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'">
+
+    <input type="submit"  value="Submit"  >
+
+
+  </form> 
+
+</div>
+  <div *ngIf="authService.error != ''">
+    <p>{{authService.error}}</p>  
+  </div>
+
+

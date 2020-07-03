@@ -1,4 +1,7 @@
+
 import { Component } from '@angular/core';
+import {AuthService} from "./auth.service";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'BEproject';
+
+ 
+  constructor(public authService: AuthService){
+  }
+
+  
+
+  logout(){
+    this.authService.logOut();
+  }
 }

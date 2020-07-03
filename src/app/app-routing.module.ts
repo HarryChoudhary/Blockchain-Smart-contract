@@ -1,11 +1,33 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import {SigninComponent} from "./signin/signin.component";
+import {AuthproviderComponent} from "./authprovider/authprovider.component";
+import {EmailauthComponent} from "./emailauth/emailauth.component";
+import {PrivateComponent} from "./private/private.component";
+import {PasswordlessComponent} from "./passwordless/passwordless.component";
 
+//import the Angular Guard
+import {AuthGuard} from "./auth/auth.guard";
+import { HomeComponent } from './home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:"", component: HomeComponent },
+    {path:"Email", component: EmailauthComponent },
+    {path:"signin", component: SigninComponent },
+    {path:"provider", component: AuthproviderComponent },
+    {path:"passwordless", component: PasswordlessComponent },
+    {path:"private", 
+    canActivate: [AuthGuard]
+    ,component: PrivateComponent },
+    
+]
+
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports:[
+    RouterModule.forRoot(routes)
+  ],
+  exports: [ RouterModule ]
 })
 export class AppRoutingModule { }

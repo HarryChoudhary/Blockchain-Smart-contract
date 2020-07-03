@@ -1,0 +1,72 @@
+<head>
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+</head>
+        <div class="header-blue" id="navb">  
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
+                        <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                        <ul>
+                            <li><button routerLink="Email" style="color: black;">Register</button></li>
+                            <li><button routerLink="provider" style="color: black;">Admin</button></li>
+                            <li><button routerLink="signin" style="color: black;">User-Signin</button></li>
+
+                          </ul>
+                          <ul>
+                            <li *ngIf="authService.user | async as user; else showSignIn"><button (click)="logout()">Log Out</button></li>
+                          </ul>
+                        </nav>
+
+                        <h3>The revolution is here.</h3>
+                        <p>BlockChain Cloud Storage :Decentralized Disruption of a Multi-Billion Dollar Industry </p></div>
+                    <div
+                        class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder">
+                        <div class="iphone-mockup"><img class="device" src="assets/img/iphone.svg">
+                            <div class="screen"></div>
+                        </div>
+                </div>
+            
+        </div>
+
+    <div class="text-dark" id="foot">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a class="text-dark" href="#">Storage</a></li>
+                            <li><a class="text-dark" href="#">Development</a></li>
+                            <li><a class="text-dark" href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a class="text-dark" href="#">Company</a></li>
+                            <li class="text-dark"><a class="text-dark" href="#">Team</a></li>
+                            <li><a class="text-dark" href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Company Name</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    </div>
+                    <div class="col item social" id="icon_id"><a href="#"></a>
+                        <p id="cpyrgt" class="copyright"></p>
+                        <div class="row">
+                            <div class="col">
+                            </div>
+                        </div><i class="icon ion-social-facebook" id="facebookicon"></i><a href="#"><i class="icon ion-social-twitter" id="twitterid"></i></a><a href="#"><i class="icon ion-social-snapchat visible" id="snapchatid"></i></a><a href="#"><i class="icon ion-social-instagram" id="instagramid"></i></a></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>

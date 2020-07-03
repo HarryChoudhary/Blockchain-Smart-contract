@@ -1,0 +1,34 @@
+<!-- Upload Page-->
+<div *ngIf="authService.user | async as user">
+  <body>
+    <form action="">
+      <div class="row">  
+        <div class="col-sm-6">
+          <div class="form-group" name="document"> <br>  
+      <label for="text">Select Document: </label>
+        <select class="aqua-select" id="selectDoc">
+          <option selected>Select File</option>
+          <option value="Adhar">Adhar Card</option>
+          <option value="Pancard">Pancard</option>
+          <option value="DL">Driving License</option>
+        </select>
+
+      
+      <label for="txtPassword">Password</label>  
+        <input type="password" class="form-control" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Encryption Password'" [(ngModel)]="encPassword">  
+      
+      <input type="file" class="form-control" id="document" accept=".png,.jpg,.pdf,.txt" (change)="selectFile($event)" name="document" placeholder="Enter Document">
+      <button type="submit" class="btn btn-primary" (click)="upload()" [disabled]="!selectedFiles" >Upload</button> <br>
+      <button type="submit" class="btn btn-primary" (click)="logout()"  >Logout</button> 
+        <div>
+        <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms and Conditions and Privacy Policy
+        <input type="submit" name="submit" id="enable"  disabled>
+        </div>
+        
+          </div>
+        </div>
+      </div>
+    </form> 
+
+  </body>
+</div>
